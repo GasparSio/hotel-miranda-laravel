@@ -11,7 +11,7 @@
             <h1>Ultimate Room</h1>
         </div>
         <div class="room__detail-about__section-links">
-            <a href="./index.php" class="room-detail-link-home">Home</a>
+            <a href="./" class="room-detail-link-home">Home</a>
             <span>|</span>
             <a href="#" class="room-detail-link-about">Room Details</a>
         </div>
@@ -39,7 +39,7 @@
         </div>
         <div class="room__detail-form-container">
             <h1>Check Availability</h1>
-            <form action="../room-detail.php" method="POST">
+            <form action="../room-detail" method="POST">
                 <label for="check-in">Check in</label>
                 <input type="date" id="check-in" name="check-in" class="room-detail-checkininput" value="{{$start}}" required>
 
@@ -167,7 +167,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
                 <div class="room__detail-grid-price">
                     <span>${{$relatedRoom['price']}}/Night</span>
-                    <form action="../room-detail.php" method="GET">
+                    <form action="../room-detail" method="GET">
                         <input type="hidden" name="roomId" value="{{$relatedRoom['id']}}">
                         <button type="submit">Booking Now</button>
                     </form>

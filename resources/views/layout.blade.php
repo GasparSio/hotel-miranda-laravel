@@ -22,7 +22,7 @@
             <span class="crossIcon"><img src="/img/home/img-cross.png" alt="Cross menu icon" class="icon-menu--cross inactive"></span>
         </div>
         <div class="header__section-icon">
-            <a href="../index.php" class="icon_section-H">
+            <a href="../" class="icon_section-H">
                 <div>
                     <span>H</span>
                 </div>
@@ -33,20 +33,20 @@
             </div>
         </div>
         <div class="header__section-links">
-            <a href="./about.php" class="section-why" id="aboutLink">About Us</a>
-            <a href="./rooms-grid.php" class="section-benefits" id="roomsLink">Rooms</a>
-            <a href="./offers.php" class="section-prices" id="offersLink">Offers</a>
-            <a href="./contact.php" class="section-contact" id="contactLink">Contact</a>
+            <a href="./about" class="section-why" id="aboutLink">About Us</a>
+            <a href="./rooms-grid" class="section-benefits" id="roomsLink">Rooms</a>
+            <a href="./offers" class="section-prices" id="offersLink">Offers</a>
+            <a href="./contact" class="section-contact" id="contactLink">Contact</a>
         </div>
         <div class="header__section-search-account">
-            <a href="../contact.php"><img src="/img/home/img-account.png" alt="Account icon"></a>
-            <a href="../rooms-grid.php"><img src="/img/home/img-search.png" alt="Search icon"></a>
+            <a href="../contact"><img src="/img/home/img-account.png" alt="Account icon"></a>
+            <a href="../rooms-grid"><img src="/img/home/img-search.png" alt="Search icon"></a>
         </div>
         <div class="header__mob-menu inactive">
-            <a href="./about.php" class="section-why" id="aboutLink">About Us</a>
-            <a href="./rooms-grid.php" class="section-benefits" id="roomsLink">Rooms</a>
-            <a href="./offers.php" class="section-prices" id="offersLink">Offers</a>
-            <a href="./contact.php" class="section-contact" id="contactLink">Contact</a>
+            <a href="./about" class="section-why" id="aboutLink">About Us</a>
+            <a href="./rooms-grid" class="section-benefits" id="roomsLink">Rooms</a>
+            <a href="./offers" class="section-prices" id="offersLink">Offers</a>
+            <a href="./contact" class="section-contact" id="contactLink">Contact</a>
         </div>
     </header>
     <div>

@@ -68,10 +68,10 @@ var currentPage = window.location.pathname;
 
 // Mapea la URL de la página actual a la etiqueta <a> correspondiente
 var pageToLinkMap = {
-    '/about.php': 'aboutLink',
-    '/rooms-grid.php': 'roomsLink',
-    '/offers.php': 'offersLink',
-    '/contact.php': 'contactLink'
+    '/about': 'aboutLink',
+    '/rooms-grid': 'roomsLink',
+    '/offers': 'offersLink',
+    '/contact': 'contactLink'
 };
 
 // Obtén el ID de la etiqueta <a> correspondiente a la página actual

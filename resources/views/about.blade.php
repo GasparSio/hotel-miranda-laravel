@@ -11,9 +11,9 @@
             <h1>About Us</h1>
         </div>
         <div class="about__about__section-links">
-            <a href="./index.php" class="about-link-home">Home</a>
+            <a href="./" class="about-link-home">Home</a>
             <span>|</span>
-            <a href="./about.php" class="about-link-about">About</a>
+            <a href="./about" class="about-link-about">About</a>
         </div>
     </div>
 </section>
@@ -55,7 +55,7 @@
             <h1>Get Restaurant Facilities & Many Other More</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tem por incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
             <div class="about__resto-info-button">
-                <a href="index.php">TAKE A TOUR</a>
+                <a href="index">TAKE A TOUR</a>
             </div>
         </div>
     </div>
@@ -171,9 +171,9 @@
                 <img id="about-img3" src="/img/about/counter-slider-img3.jpg" alt="hotel image">
             </div>
             <div class="about__section-slider-nav">
-                <a href="about.php"></a>
-                <a href="about.php"></a>
-                <a href="about.php"></a>
+                <a href="about"></a>
+                <a href="about"></a>
+                <a href="about"></a>
             </div>
         </div>
     </div>

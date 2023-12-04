@@ -11,9 +11,9 @@
             <h1>Our Offers</h1>
         </div>
         <div class="room__detail-about__section-links">
-            <a href="./index.php" class="room-detail-link-home">Home</a>
+            <a href="./" class="room-detail-link-home">Home</a>
             <span>|</span>
-            <a href="./offers.php" class="room-detail-link-about">Offers</a>
+            <a href="./offers" class="room-detail-link-about">Offers</a>
         </div>
     </div>
 </section>
@@ -54,7 +54,7 @@
             @endforeach
         </div>
         <div class="offers__room-button-container">
-            <form action="../room-detail.php" method="GET">
+            <form action="../room-detail" method="GET">
                 <input type="hidden" name="roomId" value="{{$room['id']}}">
                 <button type="submit">Booking Now</button>
             </form>
@@ -84,7 +84,7 @@
                 <p>{{$room['description']}}</p>
                 <div class="offers__detail-grid-price">
                     <span>${{$room['price']}} /Night</span>
-                    <a href="rooms-grid.php">Check our available rooms</a>
+                    <a href="rooms-grid">Check our available rooms</a>
                 </div>
             </div>
             @endforeach

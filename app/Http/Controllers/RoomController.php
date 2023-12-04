@@ -20,7 +20,10 @@ class RoomController extends Controller
     public function room()
     {
         $rooms = Room::all();
-
+        foreach ($rooms as &$room) {
+            $room['randomImage'] = GenericFn::getRandomImage();
+            $room['amenityImages'] = GenericFn::getAmenityImages();
+        }
         return view('room-grid', ['rooms' => $rooms]);
     }
     public function show($id)

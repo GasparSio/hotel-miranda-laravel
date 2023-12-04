@@ -11,9 +11,9 @@
             <h1>Ultimate Room</h1>
         </div>
         <div class="rooms__about__section-links">
-            <a href="./index.php" class="rooms-link-home">Home</a>
+            <a href="./" class="rooms-link-home">Home</a>
             <span>|</span>
-            <a href="./rooms-grid.php" class="rooms-link-about">Rooms</a>
+            <a href="./rooms-grid" class="rooms-link-about">Rooms</a>
         </div>
     </div>
 </section>
@@ -31,7 +31,7 @@
             <p>{{$room['description']}}</p>
             <div class="rooms__grid-price">
                 <span>$ {{$room['price']}} /Night</span>
-                <form action="../room-detail.php" method="GET">
+                <form action="../room-detail" method="GET">
                     <input type="hidden" name="roomId" value="{{$room['id']}}">
                     <button type="submit">Booking Now</button>
                 </form>

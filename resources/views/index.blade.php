@@ -9,12 +9,12 @@
         <p>THE ULTIMATE LUXURY EXPERIENCE</p>
         <h1>The Perfect Base For You</h1>
         <div class="taketour_section-button-content">
-            <a href="rooms-grid.php" class="button-taketour">TAKE A TOUR</a>
-            <a href="about.php" class="button-learnmore">LEARN MORE</a>
+            <a href="rooms-grid" class="button-taketour">TAKE A TOUR</a>
+            <a href="about" class="button-learnmore">LEARN MORE</a>
         </div>
     </div>
 </section>
-<form action="../rooms-grid.php" method="GET">
+<form action="../rooms-grid" method="GET">
     <section class="schedule__section">
         <div class="schedule__section-calendar">
             <div class="input__container__arrival">
@@ -39,7 +39,7 @@
         <h1>Discover Our Underground.</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <div class="about__section-info-button">
-            <a href="rooms-grid.php">BOOK NOW</a>
+            <a href="rooms-grid">BOOK NOW</a>
         </div>
     </div>
     <div class="about__section-feature">
@@ -69,7 +69,7 @@
                     {!! $room['randomImage'] !!}
                 </div>
                 <div class="rooms__section-price">
-                    <a href="../rooms-grid.php">
+                    <a href="../rooms-grid">
                         <div class="rooms__section-price-info">
                             <h1>{{$room['room_type']}}</h1>
                             <p>{{$room['description']}}</p>
@@ -98,7 +98,7 @@
         </div>
     </div>
     <div class="video__section-button">
-        <a href="rooms-grid.php">Book Now</a>
+        <a href="rooms-grid">Book Now</a>
     </div>
 </section>
 <section class="features__section">
