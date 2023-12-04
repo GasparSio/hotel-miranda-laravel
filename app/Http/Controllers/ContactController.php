@@ -10,13 +10,33 @@ class ContactController extends Controller
     public function postcontact(Request $request)
     {
         if ($request->isMethod('post')) {
-            Contact::create($request->all());
+            $request->validate([
+                'contactName' => 'required',
+                'contactPhone' => 'required',
+                'contactEmail' => 'required|email',
+                'contactSubject' => 'required',
+                'contactMessage' => 'required',
+            ]);
+
+            $full_name = $request->input('contactName');
+            $phone = $request->input('contactPhone');
+            $email = $request->input('contactEmail');
+            $subject = $request->input('contactSubject');
+            $contactmessage = $request->input('contactMessage');
+
+            Contact::create([
+                'full_name' => $full_name,
+                'phone_number' => $phone,
+                'email' => $email,
+                'subject_of_review' => $subject,
+                'review_body' => $contactmessage,
+            ]);
 
             $formSent = 'Form Sent';
+            $error = false;
             $notification = ['message' => $formSent];
-            return view('contact', compact('notification'));
+            return view('contact', ['notification' => $notification, 'error' => $error]);
         } else {
-            echo 'no entro';
             return view('contact');
         }
     }
