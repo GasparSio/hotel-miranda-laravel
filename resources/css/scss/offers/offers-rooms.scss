@@ -1,0 +1,162 @@
+@import '../variables.scss';
+
+.offers__room-section{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    position: relative;
+}
+.offers__room-info-container{
+    margin: auto;
+    position: relative;
+    margin-top: 30px;
+}
+.offers__room-image{
+    max-width: 600px;
+    img{
+        max-width: 100%;
+        border-radius: 4px;
+    }
+}
+.offers__room-title{
+    margin-top: 20px;
+    h2{
+        font-family: $archivo-font;
+        font-weight: $weight-700;
+        font-size: 14px;
+        line-height: 15.23px;
+        letter-spacing: 2.8px;
+        color: $letterColor-grey-light;
+    }
+    h1{
+        font-family: $old-standard-font;
+        font-weight: $weight-400;
+        font-size: 40px;
+        line-height: 48px;
+        letter-spacing: -1.44px;
+        color: $background-black;
+        margin-top: 37px;
+        max-width: 265px;
+    }
+}
+.offers__room-price-high{
+    position: absolute;
+    top: 59%;
+    right: 4%;
+}
+.offers__room-price-low{
+    position: absolute;
+    top: 65%;
+    right: 4%;
+}
+.price-high-number{
+    font-family: $archivo-font;
+    font-weight: $weight-700;
+    font-size: 23px;
+    line-height: 25.02px;
+    color: $color-botton;
+    text-decoration: line-through;
+}
+.price-high-text{
+    font-family: $archivo-font;
+    font-weight: $weight-700;
+    font-size: 11px;
+    line-height: 11.97px;
+    color: $color-botton;
+    text-decoration: line-through;
+}
+.price-low-number{
+    font-family: $archivo-font;
+    font-weight: $weight-700;
+    font-size: 30px;
+    line-height: 32.64px;
+    color: #DE5777;
+}
+.price-low-text{
+    font-family: $archivo-font;
+    font-weight: $weight-700;
+    font-size: 11px;
+    line-height: 11.97px;
+    color: #DE5777;
+}
+.offers__room-text-container{
+    max-width: 600px;
+    margin: auto;
+    p{
+        font-family: $roboto-font;
+        font-weight: $weight-400;
+        font-size: 14px;
+        line-height: 24px;
+        color: $letterColor-grey-light;
+    }
+}
+.offers__room-line{
+    display: none;
+    width: 560px;
+    height: 2px;
+    background-color: #ECECEC;
+    margin: auto;
+}
+
+@media only screen and (min-width: 1000px){
+    .offers__room-image{
+        max-width: 640px;
+    }
+    .offers__room-price-container{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        max-width: 600px;
+        height: 125px;
+        margin: auto;
+        margin-top: -60px;
+        border-top: 4px solid $color-botton;
+        padding: 0 20px;
+    }
+    .offers__room-price-section{
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .offers__room-price-high{
+        display: flex;
+        position: relative;
+    }
+    .offers__room-price-low{
+        display: flex;
+        position: relative;
+    }
+    .offers__room-title{
+        margin-top: 20px;
+        width: 70%;
+        margin-top: 0px;
+        h1{
+            margin-top: 10px;
+            max-width: 100%;
+        }
+    }
+    .offers__room-line{
+        display: flex;
+    }
+    .offers__room-text-amen-container{
+        display: flex;
+        margin: auto;
+        width: 70%;
+        justify-content: space-between;
+        max-width: 600px;
+        background-color: white;
+        padding: 40px 20px;
+        position: relative;
+    }
+    .offers__room-text-container{
+        margin: 0;
+        max-width: 240px;
+        p{
+            font-size: 10px;
+        }
+    }
+}

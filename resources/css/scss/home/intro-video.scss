@@ -1,0 +1,113 @@
+@import '../variables.scss';
+
+.video__section{
+    display: flex;
+    flex-direction: column;
+    background-color: $background-black;
+    margin-top: 30px;
+}
+.video__section-info{
+    width: 90%;
+    margin: auto;
+    max-width: 600px;
+    margin-top: 35px;
+    h2{
+        font-family: $archivo-font;
+        font-size: 14px;
+        font-weight: $weight-700;
+        line-height: 15.23px;
+        letter-spacing: 2.8px;
+        color: $color-brown-light;
+    }
+    h1{
+        margin-top: 20px;
+        font-family: $old-standard-font;
+        font-size: 56px;
+        font-weight: $weight-400;
+        line-height: 60px;
+        letter-spacing: -1.2px;
+        color: $background-white;
+    }
+    p{
+        margin-top: 20px;
+        font-family: $archivo-font;
+        font-size: 14px;
+        font-weight: $weight-400;
+        line-height: 24px;
+        color: $color-grey-light-letter;
+        max-width: 400px;
+    }
+}
+.video__section-video{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    width: 90%;
+    max-width: 600px;
+    margin-top: 35px;
+    iframe{
+        height: 250px;
+        border-radius: 5px;
+    }
+
+}
+.video__section-button{
+    max-width: 320px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 216px;
+        height: 60px;
+        background-color: $color-botton;
+        color: $background-white;
+        border: none;
+        font-size: 14px;
+        font-family: $archivo-font;
+        font-weight: $weight-700;
+        line-height: 15.23px;
+        letter-spacing: 2.8px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: transform 0.2s;
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    .video__section{
+        flex-direction: column;
+        background: rgb(0,0,0);
+        background: linear-gradient(90deg, rgba(0,0,0,1) 75%, rgba(173,157,130,1) 75%); 
+    }
+    .video__section-info-video{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        max-width: 1024px;
+        margin: auto;
+    }
+    .video__section-info{
+        width: auto;
+        margin: 0;
+        margin-top: 35px;
+    }
+    .video__section-video{
+        width: auto;
+        max-width: 630px;
+        border-radius: 8px;
+        iframe{
+            width: 550px;
+        }
+
+
+    }
+}
+

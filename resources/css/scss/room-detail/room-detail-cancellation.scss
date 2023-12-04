@@ -1,0 +1,49 @@
+@import '../variables.scss';
+
+
+.room__detail-cancellation{
+    width: 90%;
+    margin: auto;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    margin-top: 50px;
+    h1{
+        margin: 15px 4px;
+        font-family: $old-standard-font;
+        font-size: 30px;
+        font-weight: $weight-400;
+        line-height: 30px;
+        color: $background-black;
+    }
+    p{
+        font-family: $roboto-font;
+        font-size: 16px;
+        font-weight: $weight-400;
+        line-height: 24px;
+        color: $letterColor-grey-light;
+        margin: 20px 5px;
+    }
+}
+.room__detail-cancellation-line{
+    background-color: #F1F1F1;
+    max-width: 320px;
+    height: 3px;
+}
+
+@media only screen and (min-width: 1000px){
+    .room__detail-cancellation{
+        width: 600px;
+        margin: auto;
+        margin-top: 60px;
+        max-width: none;
+        h1{
+            margin: 15px 25px;
+        }
+    }
+    .room__detail-cancellation-line{
+        max-width: 550px;
+        margin-left: 25px;
+    }
+}

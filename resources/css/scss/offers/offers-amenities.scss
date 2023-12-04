@@ -1,0 +1,77 @@
+@import '../variables.scss';
+
+.offers__room-amenities-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 30px;
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+.offers__room-amenities-info{
+        width: 50%;
+        margin-bottom: 10px;
+        img{
+            padding-right: 4%;
+        }
+        span{
+            font-family: $roboto-font;
+            font-size: 13px;
+            font-weight: $weight-400;
+            line-height: 17.58px;
+            color: $letterColor-grey-light;
+        }
+}
+.offers__room-button-container{
+    width: 90%;
+    margin: auto;
+    max-width: 300px;
+    margin-bottom: 40px;
+    form{
+        button{
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 216px;
+            height: 60px;
+            background-color: $color-botton;
+            color: $background-white;
+            border: none;
+            font-size: 14px;
+            font-family: $archivo-font;
+            font-weight: $weight-700;
+            line-height: 15.23px;
+            letter-spacing: 2.8px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    .offers__room-amenities-container{
+        max-width: 265px;   
+        margin: 0px;
+        height: 225px;
+    }
+    .offers__room-amenities-info{
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        span{
+            font-size: 11px;
+        }
+    }
+    .offers__room-button-container{
+        position: absolute;
+        margin-bottom: 0;
+        bottom: 15px;
+    }
+}

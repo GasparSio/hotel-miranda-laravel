@@ -1,0 +1,40 @@
+@import './scss/variables.scss';
+@import './scss/header.scss';
+@import './scss/footer.scss';
+@import './scss/home/take-tour.scss';
+@import './scss/home/schedule.scss';
+@import './scss/home/about-us.scss';
+@import './scss/home/rooms.scss';
+@import './scss/home/intro-video.scss';
+@import './scss/home/features.scss';
+@import './scss/home/food.scss';
+@import './scss/home/stadistics.scss';
+@import './scss/about-us/about.scss';
+@import './scss/about-us/video.scss';
+@import './scss/about-us/services.scss';
+@import './scss/about-us/resto.scss';
+@import './scss/about-us/about-features.scss';
+@import './scss/about-us/counter.scss';
+@import './scss/rooms-grid/rooms-grid-about.scss';
+@import './scss/rooms-grid/grid.scss';
+@import './scss/room-detail/room-detail-about.scss';
+@import './scss/room-detail/availability.scss';
+@import './scss/room-detail/room-detail-amenities.scss';
+@import './scss/room-detail/room-detail-profile.scss';
+@import './scss/room-detail/room-detail-cancellation.scss';
+@import './scss/room-detail/room-detail-related-rooms.scss';
+@import './scss/offers/offers-rooms.scss';
+@import './scss/offers/offers-amenities.scss';
+@import './scss/offers/popular-rooms.scss';
+@import './scss/contact/contact-info.scss';
+@import './scss/contact/contact-map.scss';
+@import './scss/contact/contact-form.scss';
+
+html, * { 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body { 
+    min-width: 320px;
+}

@@ -1,0 +1,51 @@
+@import '../variables.scss';
+
+.about__video__section{
+    max-width: 600px;
+    margin: auto;
+}
+.about__video__section-video{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    video{
+        margin: auto;
+        width: 90%;
+        max-width: 600px;
+        margin-top: 35px;
+    }
+}
+.about__video__section-info{
+    h1{
+        text-align: center;
+        font-size: 29px;
+        font-family: $old-standard-font;
+        font-weight: $weight-400;
+        line-height: 44.55px;
+        letter-spacing: -1.16px;
+        color: $background-black;
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    .about__video__section{
+        max-width: 1024px;
+        background-color: $background-grey-light;
+
+    }
+    .about__video__section-video{
+        video{
+            width: 70%;
+            max-width: none;
+        }
+    }
+    .about__video__section-info{
+        h1{
+            width: 60%;
+            margin: auto;
+            font-size: 40px;
+            margin-top: 46px;
+        }
+    }
+}

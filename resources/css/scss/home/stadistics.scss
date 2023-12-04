@@ -1,0 +1,64 @@
+@import '../variables.scss';
+
+.stadistics__section-container{
+    width: 100%;
+    background-color: $background-black;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    padding-bottom: 40px;
+    margin-bottom: 60px;
+}
+.stadistics__section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 55px;
+    img{
+        width: 78px;
+    }
+    p{
+        font-size: 16px;
+        font-family: $roboto-font;
+        font-weight: $weight-700;
+        line-height: 21.82px;
+        color: #999999;
+        margin-top: -15px;
+    }
+}
+.stadistics__section-span-number{
+    font-size: 60px;
+    font-family: $roboto-font;
+    font-weight: $weight-700;
+    line-height: 81.84px;
+    color: $background-white;
+    &:hover{
+        color: $color-botton;
+        cursor: pointer;
+    }
+}
+.stadistics__section-span-symbol{
+    font-size: 16px;
+    font-family: $roboto-font;
+    font-weight: $weight-700;
+    line-height: 21.82px;
+    color: $background-white;
+    &:hover{
+        color: $color-botton;
+        cursor: pointer;
+    }
+}
+.stadistics-category:hover{
+    color: $color-botton;
+    cursor: pointer;
+}
+@media only screen and (min-width: 1000px){
+    .stadistics__section-container{
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: auto;
+        width: 100%;
+        max-width: 1024px;
+    }
+}

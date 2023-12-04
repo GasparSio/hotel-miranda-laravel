@@ -1,0 +1,66 @@
+@import '../variables.scss';
+
+
+.contact__section{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    max-width: 600px;
+    background-color: $background-footer;
+    margin-top: 30px;
+    row-gap: 20px;
+}
+.contact__section-info{
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 190px;
+    justify-content: flex-end;
+    background-color: $background-white;
+    span{
+        position: absolute;
+        color: #F8F8F8;
+        font-family: $roboto-font;
+        font-weight: $weight-700;
+        font-size: 200px;
+        letter-spacing: -6px;
+    }
+}
+.contact__section-info-image{
+    width: 25%;
+    z-index: 1;
+    margin-left: 5%;
+}
+.contact__section-info-address{
+    z-index: 1;
+    width: 75%;
+    h2{
+        font-family: $old-standard-font;
+        font-weight: $weight-400;
+        font-size: 20px;
+        line-height: 24px;
+        color: $background-black;
+    }
+    p{
+        font-family: $roboto-font;
+        font-weight: $weight-400;
+        font-size: 14px;
+        line-height: 16.41px;
+        color: $letterColor-grey-light;
+        margin-top: 20px;
+    }
+}
+
+
+
+@media only screen and (min-width: 1000px){
+    .contact__section{
+        flex-direction: row;
+        column-gap: 20px;
+        max-width: 750px;
+    }
+    .contact__section-info{
+        width: 32%;
+    }
+}

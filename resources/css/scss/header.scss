@@ -1,0 +1,191 @@
+@import './variables.scss';
+
+//HEADER SECTTION
+.header__section{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background-color: $background-white;
+    box-shadow: 0px 3px 6px 0px #0000004A;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    transition: top 0.2s ease-in-out;
+}
+.header__section-ham-menu{
+    width: 17%;
+    display: flex;
+    justify-content: center;
+}
+.header__section-icon{
+    display: flex;
+    justify-content: center;
+    width: 34%;
+    gap: 10px;
+}
+.icon_section-H{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    background-color: $background-white;
+    box-shadow: 0px 14px 24px 0px #8B8B8B40;
+    color: black;
+    text-decoration: none;
+    span{
+        font-weight: 600;
+        font-size: 25px;
+        font-family: 'Archivo';
+    }
+}
+.icon_section-HM{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.section__HM-hotel{
+    font-weight: 600;
+    font-size: 15px;
+    font-family: 'Archivo';
+}
+.section__HM-miranda{
+    font-weight: 400;
+    font-size: 15px;
+    font-family: "Archivo";
+}
+.header__section-links{
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    display: none;
+}
+.header__section-search-account {
+    position: absolute;
+    right: 15px;
+    display: flex;
+    justify-content: center;
+    width: 15%;
+    gap: 15px;
+    cursor: pointer;
+    transition: transform;
+    a{
+        width: 20px;
+        height: 20px;
+    }
+    a img{
+        width: 100%;
+    }
+    a img:hover {
+        transform: scale(1.02);
+    }
+}
+.header__mob-menu{
+    position: absolute;
+    top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+    padding-left: 15px;
+    width: 100%;
+    background-color: $background-white;
+    z-index: 1;
+    height: 150px;
+    a{
+        text-decoration: none;
+        font-family: $archivo-font;
+        font-weight: $weight-600;
+        font-size: 16px;
+        color: $letterColor-black;
+        transition: transform;
+    }
+    a:hover{
+        transform: scale(1.05);
+        color: #a47a22;
+    }
+}
+.header__mob-menu a.active{
+    color: #a47a22;
+}
+.inactive{
+    display: none;
+}
+
+@media only screen and (min-width: 1000px){
+    //MOUSEOVER STYLES
+    .header__section.show {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+    }
+    .header__section{
+        position: absolute;
+        top: 40px;
+        width: 80%;
+        left: 8%;
+        height: 120px;
+    }
+    .header__mob-menu{
+        display: none;
+    }
+    .header__section-icon{
+        width: 26%;
+    }
+    .icon_section-H{
+        width: 35%;
+        text-decoration: none;
+        color: black;
+        height: 80px;
+        span{
+            width: 23px;
+        }
+    }
+    .section__HM-hotel{
+        font-size: 19px;
+    }
+    .section__HM-miranda{
+        font-size: 19px;
+    }
+    .header__section-links{
+        display: flex;
+        width: 45%;
+        justify-content: space-evenly;
+        a{
+            color: #111111;
+            text-decoration: none;
+            font-family: $archivo-font;
+            font-weight: $weight-600;
+            font-size: 16px;
+            transition: transform;
+        }
+        a:hover{
+            color: #a47a22;
+            transform: scale(1.05);
+        }
+    }
+    .header__section-links a.active{
+        color: #a47a22;
+    }
+    .header__section-search-account{
+        right: 25px;
+        gap: 25px;
+        a {
+            width: 33px;
+            height: 33px;
+        }
+        a img {
+            border: 2px solid #8585854D;
+            padding: 8%;
+        }
+        a img:hover {
+            transform: scale(1.02);
+        }
+    }
+    .header__section-ham-menu{
+        display: none;
+    }
+    
+}
