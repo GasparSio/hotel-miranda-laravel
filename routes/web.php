@@ -3,8 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OfferController;
 use App\Http\Controllers\RoomController;
-
-
+use App\Http\Controllers\ContactController;
 
 Route::get('/about', function () {
     return view('about');
@@ -12,9 +11,9 @@ Route::get('/about', function () {
 
 Route::get('/offers', [OfferController::class, 'offers'])->name('offers');
 
-//agrupamos las distintas rutas que podemos tener dentro de un mismo controlador, y nos quedamos solo con la ruta y el metodo
-Route::controller(RoomController::class)->group(function () {
+Route::match(['get', 'post'], '/contact', [ContactController::class, 'postcontact']);
 
+Route::controller(RoomController::class)->group(function () {
     Route::get('/', 'index')->name('index');
     Route::get('/rooms-grid', 'rooms')->name('rooms-grid');
 });
