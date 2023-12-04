@@ -11,9 +11,9 @@
             <h1>Our Offers</h1>
         </div>
         <div class="room__detail-about__section-links">
-            <a href="./" class="room-detail-link-home">Home</a>
+            <a href="./index.php" class="room-detail-link-home">Home</a>
             <span>|</span>
-            <a href="./offers" class="room-detail-link-about">Offers</a>
+            <a href="./offers.php" class="room-detail-link-about">Offers</a>
         </div>
     </div>
 </section>
@@ -73,12 +73,11 @@
 
             @foreach($rooms as $room)
             <div class="offers__detail-rooms-slider card-detail1">
-                <img src="/img/rooms-grid/room-8.avif" alt="room 1">
+                {!! $room['randomImage'] !!}
                 <div class="offers__detail-section-amenities">
                     @foreach ($room['amenityImages'] as $image)
                     {!! $image !!}
                     @endforeach
-                    {!! $relatedRoom['randomImage'] !!}
                 </div>
                 <h3>{{$room['room_type']}}</h3>
                 <p>{{$room['description']}}</p>
