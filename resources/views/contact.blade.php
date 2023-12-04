@@ -54,6 +54,7 @@
 </section>
 <section class="contact__section-form">
     <form method="POST" class="contact__form-container" id="contact-form">
+        @csrf
         <div class="form-input contact__form-name">
             <label for="input1"></label>
             <img src="/img/contact/img-input-1.png" alt="image contact">
