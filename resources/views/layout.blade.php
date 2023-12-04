@@ -150,10 +150,20 @@
         window.history.replaceState(null, null, window.location.href);
     }
 </script>
-@if(isset($notification))
+<?php
+if ($errors->any()) {
+    $error = true;
+    $notification = [];
+    foreach ($errors->all() as $error) {
+        array_push($notification, $error);
+    }
+}
+?>
+@if(isset($notification) && $notification !== [])
+@foreach($notification as $message)
 <script>
     Toastify({
-        text: "{{$notification['message']}}",
+        text: "{{$message}}",
         duration: 3000,
         newWindow: true,
         close: true,
@@ -170,6 +180,7 @@
         },
     }).showToast();
 </script>
+@endforeach
 @endif
 
 </html>
