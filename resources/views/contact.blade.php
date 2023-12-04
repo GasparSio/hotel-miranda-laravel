@@ -3,6 +3,8 @@
 
 @section('content')
 
+
+
 <section class="room__detail-about__section">
     <div class="taketour_section-header-rect"></div>
     <div class="room__detail-about__section-general">
