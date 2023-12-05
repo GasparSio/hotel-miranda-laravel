@@ -64,10 +64,4 @@ class RoomController extends Controller
         }
         return view('rooms-grid', ['rooms' => $rooms]);
     }
-    public function show($id)
-    {
-        $rooms = Room::findOrFail($id);
-
-        return view('room-detail', ['rooms' => $rooms]);
-    }
 };

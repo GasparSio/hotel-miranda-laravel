@@ -182,5 +182,26 @@ if ($errors->any()) {
 </script>
 @endforeach
 @endif
+@if(session('notification'))
+<script>
+    Toastify({
+        text: "{{session('notification')}}",
+        duration: 3000,
+        newWindow: true,
+        close: true,
+        gravity: "top",
+        position: "right",
+        stopOnFocus: true,
+        style: {
+            background: "{{session('error')}}" ? "red" : "linear-gradient(to right, #a47a22, rgb(211 202 90)",
+            width: "150px",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            top: "39px",
+        },
+    }).showToast();
+</script>
+@endif
 
 </html>

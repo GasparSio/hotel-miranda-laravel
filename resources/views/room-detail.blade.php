@@ -39,24 +39,25 @@
         </div>
         <div class="room__detail-form-container">
             <h1>Check Availability</h1>
-            <form action="../room-detail.php" method="POST">
+            <form action="/room-detail" method="POST">
+                @csrf
                 <label for="check-in">Check in</label>
-                <input type="date" id="check-in" name="check-in" class="room-detail-checkininput" value="{{$start}}" required>
+                <input type="date" id="check-in" name="checkin" class="room-detail-checkininput" value="{{$start}}">
 
                 <label for="check-out">Check out</label>
-                <input type="date" id="check-out" name="check-out" class="room-detail-checkoutinput" value="{{$end}}" required>
+                <input type="date" id="check-out" name="checkout" class="room-detail-checkoutinput" value="{{$end}}">
 
                 <label for=" fullname">Full Name</label>
-                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name">
 
                 <label for="email">Email</label>
-                <input type="text" id="email" name="email" placeholder="Enter your email" required>
+                <input type="text" id="email" name="email" placeholder="Enter your email">
 
                 <label for="phone">Phone</label>
-                <input type="text" id="phone" name="phone" placeholder="Enter your phone" required>
+                <input type="text" id="phone" name="phone" placeholder="Enter your phone">
 
                 <label for="message">Message</label>
-                <input type="text" id="message" name="message" placeholder="Any special request ?" required>
+                <input type="text" id="message" name="message" placeholder="Any special request ?">
 
                 <input type="submit" value="Book Now" class="room__detail-form-button">
             </form>

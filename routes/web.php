@@ -10,9 +10,9 @@ Route::get('/about', function () {
     return view('about');
 })->name('aboutus');
 
-Route::get('/offers', [OfferController::class, 'offers'])->name('offers');
+Route::get('/offers', [OfferController::class, 'index'])->name('offers');
 
-Route::match(['get', 'post'], '/contact', [ContactController::class, 'postcontact']);
+Route::match(['get', 'post'], '/contact', [ContactController::class, 'store']);
 
 Route::controller(RoomController::class)->group(function () {
     Route::get('/', 'index')->name('index');
@@ -20,5 +20,5 @@ Route::controller(RoomController::class)->group(function () {
 });
 Route::controller(BookingController::class)->group(function () {
     Route::get('/room-detail', 'show')->name('room-detail');
-    Route::post('/', 'store')->name('rooms-grid');
+    Route::post('/room-detail', 'store')->name('rooms-grid');
 });
