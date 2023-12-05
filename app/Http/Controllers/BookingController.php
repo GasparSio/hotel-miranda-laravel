@@ -11,42 +11,39 @@ use App\Helpers\GenericFn;
 
 class BookingController extends Controller
 {
-    // public function store(Request $request)
-    // {
-    //     if ($request->isMethod('post')) {
-    //         $request->validate([
-    //             'check-in' => 'required',
-    //             'check-out' => 'required',
-    //             'fullname' => 'required',
-    //             'email' => 'required|email',
-    //             'phone' => 'required',
-    //             'message' => 'required',
-    //         ]);
+    public function store(Request $request)
+    {
+        $request->validate([
+            'checkin' => 'required',
+            'checkout' => 'required',
+            'fullname' => 'required',
+            'email' => 'required|email',
+            'phone' => 'required',
+            'message' => 'required',
+        ]);
 
-    //         $checkin = $request->input('check-in');
-    //         $checkout = $request->input('check-out');
-    //         $fullname = $request->input('check-in');
-    //         $email = $request->input('email');
-    //         $phone = $request->input('phone');
-    //         $message = $request->input('message');
+        $checkin = $request->input('check-in');
+        $checkout = $request->input('check-out');
+        $fullname = $request->input('fullname');
+        $email = $request->input('email');
+        $phone = $request->input('phone');
+        $message = $request->input('message');
+        $roomId = $_SESSION['roomId'];
 
-    //         Booking::create([
-    //             'guest' => $fullname,
-    //             'phone_number' => $phone,
-    //             'email' => $email,
-    //             'check_in' => $checkin,
-    //             'check_out' => $checkout,
-    //             'special_request' => $message,
-    //         ]);
+        Booking::create([
+            'guest' => $fullname,
+            'phone_number' => $phone,
+            'email' => $email,
+            'check_in' => $checkin,
+            'check_out' => $checkout,
+            'special_request' => $message,
+            'room_id' => $roomId,
+        ]);
 
-    //         $formSent = 'Form Sent';
-    //         $error = false;
-    //         $notification = ['message' => $formSent];
-    //         return view('contact', ['notification' => $notification, 'error' => $error]);
-    //     } else {
-    //         return view('contact');
-    //     }
-    // }
+        $error = false;
+        $notification = 'Your form has been sent';
+        return redirect('/')->with(['notification' => $notification, 'error' => $error]);
+    }
     public function show(Request $request)
     {
         $amenitiesData = [
@@ -82,6 +79,7 @@ class BookingController extends Controller
         }
 
         $roomId = $request->input('roomId');
+        $_SESSION['roomId'] = $roomId;
         $room = Room::find($roomId);
 
         if (isset($room['discount'])) {
