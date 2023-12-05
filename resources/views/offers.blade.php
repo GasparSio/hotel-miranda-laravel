@@ -11,9 +11,9 @@
             <h1>Our Offers</h1>
         </div>
         <div class="room__detail-about__section-links">
-            <a href="./index.php" class="room-detail-link-home">Home</a>
+            <a href="./" class="room-detail-link-home">Home</a>
             <span>|</span>
-            <a href="./offers.php" class="room-detail-link-about">Offers</a>
+            <a href="./offers" class="room-detail-link-about">Offers</a>
         </div>
     </div>
 </section>
