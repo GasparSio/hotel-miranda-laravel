@@ -8,7 +8,7 @@ use App\Helpers\GenericFn;
 
 class OfferController extends Controller
 {
-    public function offers()
+    public function index()
     {
         $amenitiesData = [
             ['url' => '/img/room-detail/img-air-cond.png', 'description' => 'Air conditioner'],
