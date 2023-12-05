@@ -978,7 +978,7 @@
     background-color: white;
     margin: auto;
     position: relative;
-    margin-bottom: -40px;
+    /* margin-bottom: -40px; */
 }
 
 .rooms__section-slider-container {

@@ -11,7 +11,7 @@
             <h1>Ultimate Room</h1>
         </div>
         <div class="room__detail-about__section-links">
-            <a href="./" class="room-detail-link-home">Home</a>
+            <a href="./index.php" class="room-detail-link-home">Home</a>
             <span>|</span>
             <a href="#" class="room-detail-link-about">Room Details</a>
         </div>
@@ -39,12 +39,12 @@
         </div>
         <div class="room__detail-form-container">
             <h1>Check Availability</h1>
-            <form action="../room-detail" method="POST">
+            <form action="../room-detail.php" method="POST">
                 <label for="check-in">Check in</label>
-                <input type="date" id="check-in" name="check-in" class="room-detail-checkininput" value="{{$start}}" required>
+                <input type="date" id="check-in" name="check-in" class="room-detail-checkininput" value="{{isset($start)}}" required>
 
                 <label for="check-out">Check out</label>
-                <input type="date" id="check-out" name="check-out" class="room-detail-checkoutinput" value="{{$end}}" required>
+                <input type="date" id="check-out" name="check-out" class="room-detail-checkoutinput" value="{{isset($end)}}" required>
 
                 <label for=" fullname">Full Name</label>
                 <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
