@@ -7,7 +7,7 @@ use App\Models\Contact;
 
 class ContactController extends Controller
 {
-    public function postcontact(Request $request)
+    public function store(Request $request)
     {
         if ($request->isMethod('post')) {
             $request->validate([
@@ -32,7 +32,7 @@ class ContactController extends Controller
                 'review_body' => $contactmessage,
             ]);
 
-            $formSent = 'Form Sent';
+            $formSent = 'Your form has been sent';
             $error = false;
             $notification = ['message' => $formSent];
             return view('contact', ['notification' => $notification, 'error' => $error]);
