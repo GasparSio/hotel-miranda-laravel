@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+session_start();
+
 use Illuminate\Http\Request;
 use App\Models\Booking;
 use App\Models\Room;
@@ -60,6 +62,13 @@ class BookingController extends Controller
             ['url' => '/img/room-detail/img-bad.png', 'description' => 'Single bed'],
             ['url' => '/img/room-detail/img-towels.png', 'description' => 'Towels'],
         ];
+        if (isset($_SESSION['availdatein']) && isset($_SESSION['availdateout'])) {
+            $start = $_SESSION['availdatein'];
+            $end = $_SESSION['availdateout'];
+        } else {
+            $start = null;
+            $end = null;
+        };
 
         $relatedRooms =
             Room::where('status', 'Available')
@@ -82,6 +91,6 @@ class BookingController extends Controller
         $room->amenityImages = GenericFn::getAmenityImages();
         $room->amenitiesData = GenericFn::getAmenitiesData($amenitiesData);
 
-        return view('room-detail', ['room' => $room, 'relatedRooms' => $relatedRooms]);
+        return view('room-detail', ['room' => $room, 'relatedRooms' => $relatedRooms, 'start' => $start, 'end' => $end]);
     }
 }
