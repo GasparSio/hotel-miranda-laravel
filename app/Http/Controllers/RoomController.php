@@ -21,12 +21,12 @@ class RoomController extends Controller
         session_destroy();
         return view('index', ['rooms' => $rooms]);
     }
-    public function rooms()
+    public function rooms(Request $request)
     {
-        if (isset($_GET["availdatein"]) && isset($_GET["availdateout"])) {
-            $checkin = htmlspecialchars($_GET["availdatein"]);
+        if ($request->input('availdatein') && $request->input('availdateout')) {
+            $checkin = $request->input('availdatein');
             $_SESSION['availdatein'] = $checkin;
-            $checkout = htmlspecialchars($_GET["availdateout"]);
+            $checkout = $request->input('availdateout');
             $_SESSION['availdateout'] = $checkout;
 
             $rooms = Room::where('status', 'Available')
