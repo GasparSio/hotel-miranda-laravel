@@ -18,6 +18,7 @@ class RoomController extends Controller
             $room['randomImage'] = GenericFn::getRandomImage();
             $room['amenityImages'] = GenericFn::getAmenityImages();
         }
+        session_destroy();
         return view('index', ['rooms' => $rooms]);
     }
     public function rooms()
@@ -65,7 +66,7 @@ class RoomController extends Controller
     }
     public function show($id)
     {
-        $rooms = Room::findorFail($id);
+        $rooms = Room::findOrFail($id);
 
         return view('room-detail', ['rooms' => $rooms]);
     }
