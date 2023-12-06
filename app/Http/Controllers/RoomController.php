@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 session_start();
 
-use Illuminate\Support\Facades\DB;
+
 use Illuminate\Http\Request;
 use App\Models\Room;
 use App\Helpers\GenericFn;
@@ -29,28 +29,7 @@ class RoomController extends Controller
             $checkout = $request->input('availdateout');
             $_SESSION['availdateout'] = $checkout;
 
-            $rooms = Room::where('status', 'Available')
-                ->where('discount', 0)
-                ->whereNotExists(
-                    function ($query) use ($checkin, $checkout) {
-                        $query->select(DB::raw(1))
-                            ->from('booking as b')
-                            ->whereRaw('room.id = b.room_id')
-                            ->where(function ($subquery) use ($checkin, $checkout) {
-                                $subquery->whereBetween('b.check_in', [$checkin, $checkout])
-                                    ->orWhereBetween('b.check_out', [$checkin, $checkout])
-                                    ->orWhere(function ($innerSubquery) use ($checkin, $checkout) {
-                                        $innerSubquery->where('b.check_in', '>=', $checkin)
-                                            ->where('b.check_in', '<=', $checkout);
-                                    })
-                                    ->orWhere(function ($innerSubquery) use ($checkin, $checkout) {
-                                        $innerSubquery->where('b.check_out', '>=', $checkin)
-                                            ->where('b.check_out', '<=', $checkout);
-                                    });
-                            });
-                    }
-                )
-                ->get();
+            $rooms = Room::available($checkin, $checkout);
         } else {
             $rooms =
                 Room::where('status', 'Available')
