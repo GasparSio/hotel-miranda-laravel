@@ -52,7 +52,7 @@
     </div>
 </section>
 <section class="contact__section-map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.1314070555613!2d-3.7172119244066213!3d40.42808905494852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422930bf75e89b%3A0x37bfddc02cf008f4!2sOxygen%20Workspace!5e0!3m2!1sen!2ses!4v1695389644229!5m2!1sen!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3787.2980160125326!2d-68.81214462521513!3d18.333683674857156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ea8abd541e1c75f%3A0x6d894f9bbf94a8b0!2sMiranda%20Hotel%20Resorts%20Bayahibe!5e0!3m2!1sen!2ses!4v1701944393060!5m2!1sen!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </section>
 <section class="contact__section-form">
     <form method="POST" class="contact__form-container" id="contact-form">
