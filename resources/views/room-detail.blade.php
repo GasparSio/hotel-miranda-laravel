@@ -74,8 +74,10 @@
     <div class="room__detail-amenities-line"></div>
     <div class="room__detail-amenities-info-container">
         @foreach ($room['amenitiesData'] as $amenity)
-        <img src="{{ $amenity['url'] }}" alt="{{ $amenity['description'] }}">
-        <span>{{ $amenity['description'] }}</span>
+        <div class="room__detail-amenities-info-container-section">
+            <img src="{{ $amenity['url'] }}" alt="{{ $amenity['description'] }}">
+            <span>{{ $amenity['description'] }}</span>
+        </div>
         @endforeach
     </div>
 
