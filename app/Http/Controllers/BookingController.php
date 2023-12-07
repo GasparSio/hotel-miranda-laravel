@@ -46,19 +46,6 @@ class BookingController extends Controller
     }
     public function show(Request $request)
     {
-        $amenitiesData = [
-            ['url' => '/img/room-detail/img-air-cond.png', 'description' => 'Air conditioner'],
-            ['url' => '/img/room-detail/img-breakfast.png', 'description' => 'Breakfast'],
-            ['url' => '/img/room-detail/img-cleaning.png', 'description' => 'Cleaning'],
-            ['url' => '/img/room-detail/img-grocery.png', 'description' => 'Grocery'],
-            ['url' => '/img/room-detail/img-shop near.png', 'description' => 'Shop near'],
-            ['url' => '/img/room-detail/img-online.png', 'description' => '24/7 Online Support'],
-            ['url' => '/img/room-detail/img-wifi.png', 'description' => 'High speed WiFi'],
-            ['url' => '/img/room-detail/img-kitchen.png', 'description' => 'Kitchen'],
-            ['url' => '/img/room-detail/img-shower.png', 'description' => 'Shower'],
-            ['url' => '/img/room-detail/img-bad.png', 'description' => 'Single bed'],
-            ['url' => '/img/room-detail/img-towels.png', 'description' => 'Towels'],
-        ];
         if (isset($_SESSION['availdatein']) && isset($_SESSION['availdateout'])) {
             $start = $_SESSION['availdatein'];
             $end = $_SESSION['availdateout'];
@@ -87,7 +74,7 @@ class BookingController extends Controller
         }
         $room->randomImage = GenericFn::getRandomImage();
         $room->amenityImages = GenericFn::getAmenityImages();
-        $room->amenitiesData = GenericFn::getAmenitiesData($amenitiesData);
+        $room->amenitiesData = GenericFn::getAmenitiesData();
 
         return view('room-detail', ['room' => $room, 'relatedRooms' => $relatedRooms, 'start' => $start, 'end' => $end]);
     }
