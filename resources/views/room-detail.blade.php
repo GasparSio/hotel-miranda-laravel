@@ -73,62 +73,10 @@
     <h1>Amenities</h1>
     <div class="room__detail-amenities-line"></div>
     <div class="room__detail-amenities-info-container">
-        <div class="room__detail-amenities-info">
-            <img src="/img/room-detail/img-air-cond.png" alt="image amenities">
-            <span>Air conditioner</span>
-        </div>
-        <div class="room__detail-amenities-info">
-            <img src="/img/room-detail/img-breakfast.png" alt="image amenities">
-            <span>Breakfast</span>
-        </div>
-        <div class="room__detail-amenities-info">
-            <img src="/img/room-detail/img-cleaning.png" alt="image amenities">
-            <span>Cleaning</span>
-        </div>
-        <div class="room__detail-amenities-info">
-            <img src="/img/room-detail/img-grocery.png" alt="image amenities">
-            <span>Grocery</span>
-        </div>
-        <div class="room__detail-amenities-info">
-            <img src="/img/room-detail/img-shop near.png" alt="image amenities">
-            <span>Shop near</span>
-        </div>
-        <div class="room__detail-amenities-info">
-            <img src="/img/room-detail/img-online.png" alt="image amenities">
-            <span>24/7 Online Support</span>
-        </div>
-        <div class="room__detail-amenities-info">
-            <img src="/img/room-detail/img-security.png" alt="image amenities">
-            <span>Smart Security</span>
-        </div>
-        <div class="room__detail-amenities-info">
-            <img src="/img/room-detail/img-wifi.png" alt="image amenities">
-            <span>High speed WiFi</span>
-        </div>
-        <div class="room__detail-amenities-info">
-            <img src="/img/room-detail/img-kitchen.png" alt="image amenities">
-            <span>Kitchen</span>
-        </div>
-        <div class="room__detail-amenities-info">
-            <img src="/img/room-detail/img-shower.png" alt="image amenities">
-            <span>Shower</span>
-        </div>
-        <div class="room__detail-amenities-info">
-            <img src="/img/room-detail/img-bad.png" alt="image amenities">
-            <span>Single bed</span>
-        </div>
-        <div class="room__detail-amenities-info">
-            <img src="/img/room-detail/img-towels.png" alt="image amenities">
-            <span>Towels</span>
-        </div>
-        <div class="room__detail-amenities-info">
-            <img src="/img/room-detail/img-locker.png" alt="image amenities">
-            <span>Strong Locker</span>
-        </div>
-        <div class="room__detail-amenities-info">
-            <img src="/img/room-detail/img-team.png" alt="image amenities">
-            <span>Expert Team</span>
-        </div>
+        @foreach ($room['amenitiesData'] as $amenity)
+        <img src="{{ $amenity['url'] }}" alt="{{ $amenity['description'] }}">
+        <span>{{ $amenity['description'] }}</span>
+        @endforeach
     </div>
 
 </section>
@@ -140,14 +88,17 @@
     </div>
     <div class="room__detail-profile-info">
         <h1>Gaspar Sio</h1>
-        <h2>Founder, Qux Co.</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        <h2>Fullstack Web Developer</h2>
+        <p>Should you have any questions or concerns, please feel free to contact me. I am here to assist you and address any inquiries you may have.</p>
+        <p><a href="https://github.com/GasparSio" target="_blank">Github</a></p>
+        <p><a href="mailto:sio.gaspar@gmail.com">Email</a></p>
     </div>
 </section>
 <section class="room__detail-cancellation">
     <h1>Cancellation</h1>
     <div class="room__detail-cancellation-line"></div>
-    <p>Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. Cancel up to 14 days to get a full refund.</p>
+    <p>Cancellations made 72 hours or more prior to the scheduled check-in date will receive a full refund.
+        Cancellations made within 72 hours of the scheduled check-in date will be charged one night's stay.</p>
 </section>
 <section class="room__detail-related-rooms">
     <div class="room__detail-title">
