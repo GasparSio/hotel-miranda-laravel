@@ -30,15 +30,15 @@ class GenericFn
     public static function getRandomImage()
     {
         $arrayImages = [
-            '<img src="/img/home/pic-slider1.jpg" alt="Room image">',
-            '<img src="/img/home/pic-slider2.jpg" alt="Room image">',
-            '<img src="/img/home/pic-slider3.jpg" alt="Room image">',
-            '<img src="/img/home/pic-slider4.jpg" alt="Room image">',
-            '<img src="/img/home/pic-slider5.jpg" alt="Room image">',
-            '<img src="/img/home/pic-slider6.jpg" alt="Room image">',
-            '<img src="/img/home/pic-slider7.jpg" alt="Room image">',
-            '<img src="/img/home/pic-slider8.jpg" alt="Room image">',
-            '<img src="/img/home/pic-slider9.jpg" alt="Room image">',
+            '/img/home/pic-slider1.jpg',
+            '/img/home/pic-slider2.jpg',
+            '/img/home/pic-slider3.jpg',
+            '/img/home/pic-slider4.jpg',
+            '/img/home/pic-slider5.jpg',
+            '/img/home/pic-slider6.jpg',
+            '/img/home/pic-slider7.jpg',
+            '/img/home/pic-slider8.jpg',
+            '/img/home/pic-slider9.jpg',
         ];
         $indiceAleatorio = array_rand($arrayImages);
         return $arrayImages[$indiceAleatorio];

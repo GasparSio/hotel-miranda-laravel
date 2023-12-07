@@ -54,7 +54,6 @@
 
     <!-- Slider main container -->
     <div class="swiper">
-        <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <!-- Slides -->
             @foreach ($rooms as $room)
@@ -66,7 +65,7 @@
                     @endforeach
                 </div>
                 <div class="slider-images">
-                    {!! $room['randomImage'] !!}
+                    <img src="{{$room['randomImage']}}" alt="room image" />
                 </div>
                 <div class="rooms__section-price">
                     <a href="../rooms-grid">

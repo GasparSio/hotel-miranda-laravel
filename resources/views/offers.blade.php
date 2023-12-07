@@ -22,7 +22,7 @@
 <section class="offers__room-section">
     <div class="offers__room-info-container">
         <div class="offers__room-image">
-            {!! $room['randomImage'] !!}
+            <img src="{{$room['randomImage']}}" alt="room image" />
         </div>
         <div class="offers__room-price-container">
             <div class="offers__room-title">
@@ -73,7 +73,7 @@
 
             @foreach($rooms as $room)
             <div class="offers__detail-rooms-slider card-detail1">
-                {!! $room['randomImage'] !!}
+                <img src="{{$room['randomImage']}}" alt="room image" />
                 <div class="offers__detail-section-amenities">
                     @foreach ($room['amenityImages'] as $image)
                     {!! $image !!}

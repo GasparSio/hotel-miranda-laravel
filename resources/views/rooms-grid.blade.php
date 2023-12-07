@@ -21,7 +21,7 @@
     <div class="rooms-slider-container">
         @foreach ($rooms as $room)
         <div class="rooms-slider">
-            {!! $room['randomImage'] !!}
+            <img src="{{$room['randomImage']}}" alt="room image" />
             <div class="rooms__section-amenities">
                 @foreach ($room['amenityImages'] as $image)
                 {!! $image !!}
