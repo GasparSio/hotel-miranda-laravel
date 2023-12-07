@@ -132,7 +132,7 @@
 
 @media only screen and (min-width: 1000px) {
     .header__section.show {
-        position: sticky;
+        position: fixed;
         top: 0;
         z-index: 999;
     }
@@ -2709,7 +2709,6 @@
     font-size: 16px;
     font-family: Archivo;
     font-weight: 700;
-    z-index: 999;
     line-height: 17.41px;
     letter-spacing: -0.48px;
     color: #222222;
@@ -3019,7 +3018,9 @@ body {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    margin: 20px 0;
+    margin-top: 30px;
+    max-width: 600px;
+    margin: 30px auto;
 }
 
 .room__detail-amenities-info {
@@ -3126,6 +3127,16 @@ body {
     font-size: 16px;
     line-height: 24px;
     color: #777777;
+    text-align: center;
+    margin-top: 15px;
+}
+.room__detail-profile-info a {
+    text-decoration: none;
+    font-family: Archivo;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #BEAD8E;
     text-align: center;
     margin-top: 15px;
 }
