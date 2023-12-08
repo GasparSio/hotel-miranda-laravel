@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Helpers\GenericFn;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -41,5 +42,20 @@ class Room extends Model
                 }
             )
             ->get();
+    }
+    public static function process_room($room)
+    {
+        $room['discountedPrice'] = intval($room['price'] - ($room['price'] * ($room['discount'] / 100)));
+        $room['randomImage'] = GenericFn::getRandomImage();
+        $room['amenityImages'] = GenericFn::getAmenityImages();
+        $room['amenitiesData'] = GenericFn::getAmenitiesData();
+        return $room;
+    }
+    public static function process_multiple_rooms($rooms)
+    {
+        foreach ($rooms as &$room) {
+            $room = self::process_room($room);
+        }
+        return $rooms;
     }
 };
