@@ -36,4 +36,30 @@ class RoomController extends Controller
         $rooms = Room::process_multiple_rooms($rooms);
         return view('rooms-grid', ['rooms' => $rooms]);
     }
+    public function show_related_rooms(Request $request)
+    {
+        if (isset($_SESSION['availdatein']) && isset($_SESSION['availdateout'])) {
+            $start = $_SESSION['availdatein'];
+            $end = $_SESSION['availdateout'];
+        } else {
+            $start = null;
+            $end = null;
+        };
+
+        $relatedRooms =
+            Room::where('status', 'Available')
+            ->where('discount', 0)
+            ->inRandomOrder()
+            ->get();
+
+        $relatedRooms = Room::process_multiple_rooms($relatedRooms);
+
+        $roomId = $request->input('roomId');
+        $_SESSION['roomId'] = $roomId;
+        $room = Room::find($roomId);
+
+        $room = Room::process_room($room);
+
+        return view('room-detail', ['room' => $room, 'relatedRooms' => $relatedRooms, 'start' => $start, 'end' => $end]);
+    }
 };
