@@ -28,7 +28,7 @@ class BookingController extends Controller
         $notification = 'Your form has been sent';
         return redirect('/')->with(['notification' => $notification, 'error' => $error]);
     }
-    public function show(Request $request)
+    public function show_related_rooms(Request $request)
     {
         if (isset($_SESSION['availdatein']) && isset($_SESSION['availdateout'])) {
             $start = $_SESSION['availdatein'];
