@@ -7,7 +7,6 @@ session_start();
 use Illuminate\Http\Request;
 use App\Models\Booking;
 use App\Models\Room;
-use App\Helpers\GenericFn;
 
 class BookingController extends Controller
 {
@@ -60,21 +59,14 @@ class BookingController extends Controller
             ->inRandomOrder()
             ->get();
 
-        foreach ($relatedRooms as &$relatedRoom) {
-            $relatedRoom['randomImage'] = GenericFn::getRandomImage();
-            $relatedRoom['amenityImages'] = GenericFn::getAmenityImages();
-        }
+        $relatedRooms = Room::process_multiple_rooms($relatedRooms);
 
         $roomId = $request->input('roomId');
         $_SESSION['roomId'] = $roomId;
         $room = Room::find($roomId);
 
-        if (isset($room['discount'])) {
-            $room['discountedPrice'] = intval($room['price'] - ($room['price'] * ($room['discount'] / 100)));
-        }
-        $room->randomImage = GenericFn::getRandomImage();
-        $room->amenityImages = GenericFn::getAmenityImages();
-        $room->amenitiesData = GenericFn::getAmenitiesData();
+
+        $room = Room::process_room($room);
 
         return view('room-detail', ['room' => $room, 'relatedRooms' => $relatedRooms, 'start' => $start, 'end' => $end]);
     }

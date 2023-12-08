@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Room;
-use App\Helpers\GenericFn;
 
 class OfferController extends Controller
 {
@@ -15,12 +14,8 @@ class OfferController extends Controller
             ->limit(5)
             ->get();
 
-        foreach ($rooms as &$room) {
-            $room['discountedPrice'] = intval($room['price'] - ($room['price'] * ($room['discount'] / 100)));
-            $room['randomImage'] = GenericFn::getRandomImage();
-            $room['amenityImages'] = GenericFn::getAmenityImages();
-            $room['amenitiesData'] = GenericFn::getAmenitiesData();
-        }
+        $rooms = Room::process_multiple_rooms($rooms);
+
         return view('offers', ['rooms' => $rooms]);
     }
 }

@@ -7,17 +7,13 @@ session_start();
 
 use Illuminate\Http\Request;
 use App\Models\Room;
-use App\Helpers\GenericFn;
 
 class RoomController extends Controller
 {
     public function index()
     {
         $rooms = Room::all();
-        foreach ($rooms as &$room) {
-            $room['randomImage'] = GenericFn::getRandomImage();
-            $room['amenityImages'] = GenericFn::getAmenityImages();
-        }
+        $rooms = Room::process_multiple_rooms($rooms);
         session_destroy();
         return view('index', ['rooms' => $rooms]);
     }
@@ -37,10 +33,7 @@ class RoomController extends Controller
                 ->get();
         }
 
-        foreach ($rooms as &$room) {
-            $room['randomImage'] = GenericFn::getRandomImage();
-            $room['amenityImages'] = GenericFn::getAmenityImages();
-        }
+        $rooms = Room::process_multiple_rooms($rooms);
         return view('rooms-grid', ['rooms' => $rooms]);
     }
 };
