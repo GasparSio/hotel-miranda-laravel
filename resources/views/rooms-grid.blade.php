@@ -30,7 +30,7 @@
             <h3>{{$room['room_type']}}</h3>
             <p>{{$room['description']}}</p>
             <div class="rooms__grid-price">
-                <span>$ {{$room['price']}} /Night</span>
+                <span class='{{ $room["discount"] ? "price-low-number" : "price-number-small" }}'>$ {{$room['discountedPrice']}} /Night</span>
                 <form action="../room-detail" method="GET">
                     <input type="hidden" name="roomId" value="{{$room['id']}}">
                     <button type="submit">Booking Now</button>
