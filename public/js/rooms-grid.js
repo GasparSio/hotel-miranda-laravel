@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const nextButton = document.querySelector('.rooms-next');
   const pagesContainer = document.querySelector('.rooms-pages');
 
-  const itemsPerPage = 6;
+  const itemsPerPage = 12;
   let currentPage = 0;
   let totalPages = Math.ceil(sliderSections.length / itemsPerPage);
 
