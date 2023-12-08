@@ -60,26 +60,26 @@
         <div class="form-input contact__form-name">
             <label for="input1"></label>
             <img src="/img/contact/img-input-1.png" alt="image contact">
-            <input type="text" id="input1" name="contactName" placeholder="Your full name">
+            <input type="text" id="input1" name="full_name" placeholder="Your full name">
         </div>
         <div class="form-input contact__form-number">
             <label for="input2"></label>
             <img src="../img/contact/img-input-2.png" alt="image contact">
-            <input type="text" id="input2" name="contactPhone" placeholder="Add phone number">
+            <input type="text" id="input2" name="phone_number" placeholder="Add phone number">
         </div>
         <div class="form-input contact__form-email">
             <label for="input3"></label>
             <img src="../img/contact/img-input-3.png" alt="image contact">
-            <input type="text" id="input3" name="contactEmail" placeholder="Enter email address">
+            <input type="text" id="input3" name="email" placeholder="Enter email address">
         </div>
         <div class="form-input contact__form-subject">
             <label for="input4"></label>
             <img src="../img/contact/img-input-4.png" alt="image contact">
-            <input type="text" id="input4" name="contactSubject" placeholder="Enter subject">
+            <input type="text" id="input4" name="subject_of_review" placeholder="Enter subject">
         </div>
         <div class="form-input contact__form-message">
             <img src="../img/contact/img-input-5.png" alt="image contact">
-            <textarea name="contactMessage" placeholder="Enter message" id="input5"></textarea>
+            <textarea name="review_body" placeholder="Enter message" id="input5"></textarea>
         </div>
         <div class="contact__form-button">
             <input type="submit" value="Send">

@@ -14,26 +14,14 @@ class ContactController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'contactName' => 'required',
-            'contactPhone' => 'required',
-            'contactEmail' => 'required|email',
-            'contactSubject' => 'required',
-            'contactMessage' => 'required',
+            'full_name' => 'required',
+            'phone_number' => 'required',
+            'email' => 'required|email',
+            'subject_of_review' => 'required',
+            'review_body' => 'required',
         ]);
 
-        $full_name = $request->input('contactName');
-        $phone = $request->input('contactPhone');
-        $email = $request->input('contactEmail');
-        $subject = $request->input('contactSubject');
-        $contactmessage = $request->input('contactMessage');
-
-        Contact::create([
-            'full_name' => $full_name,
-            'phone_number' => $phone,
-            'email' => $email,
-            'subject_of_review' => $subject,
-            'review_body' => $contactmessage,
-        ]);
+        Contact::create($request->all());
 
         $formSent = 'Your form has been sent';
         $error = false;
