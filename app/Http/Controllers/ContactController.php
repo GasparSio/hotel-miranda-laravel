@@ -7,7 +7,7 @@ use App\Models\Contact;
 
 class ContactController extends Controller
 {
-    public function show(Request $request)
+    public function show()
     {
         return view('contact');
     }
