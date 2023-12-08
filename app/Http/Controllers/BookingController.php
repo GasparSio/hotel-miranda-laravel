@@ -6,7 +6,6 @@ session_start();
 
 use Illuminate\Http\Request;
 use App\Models\Booking;
-use App\Models\Room;
 
 class BookingController extends Controller
 {

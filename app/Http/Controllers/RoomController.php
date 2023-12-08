@@ -48,7 +48,6 @@ class RoomController extends Controller
 
         $relatedRooms =
             Room::where('status', 'Available')
-            ->where('discount', 0)
             ->inRandomOrder()
             ->get();
 
