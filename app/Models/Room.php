@@ -21,7 +21,7 @@ class Room extends Model
     public static function available($checkin, $checkout)
     {
         return Room::where('status', 'Available')
-            ->where('discount', 0)
+            // ->where('discount', 0)
             ->whereNotExists(
                 function ($query) use ($checkin, $checkout) {
                     $query->select(DB::raw(1))

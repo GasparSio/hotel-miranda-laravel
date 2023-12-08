@@ -57,7 +57,6 @@
         <div class="swiper-wrapper">
             <!-- Slides -->
             @foreach ($rooms as $room)
-
             <div class="swiper-slide">
                 <div class="rooms__section-amenities">
                     @foreach ($room['amenityImages'] as $image)
@@ -74,7 +73,8 @@
                             <p>{{$room['description']}}</p>
                         </div>
                         <div class="rooms__section-price-number">
-                            <span class="price-number-big">$ {{$room['price']}}</span><span class="price-number-small">/night</span>
+                            <span class='{{ $room["discount"] ? "price-low-number" : "price-number-big" }}'>$ {{$room['discountedPrice']}} /night</span>
+                            <!-- <span class='{{ $room["discount"] ? "price-low-text" : "price-high-text" }}'> /night</span> -->
                         </div>
                     </a>
                 </div>
