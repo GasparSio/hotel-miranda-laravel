@@ -42,23 +42,24 @@
             <form action="/room-detail" method="POST">
                 @csrf
                 <label for="check-in">Check in</label>
-                <input type="date" id="check-in" name="checkin" class="room-detail-checkininput" value="{{$start}}">
+                <input type="date" id="check-in" name="check_in" class="room-detail-checkininput" value="{{$start}}">
 
                 <label for="check-out">Check out</label>
-                <input type="date" id="check-out" name="checkout" class="room-detail-checkoutinput" value="{{$end}}">
+                <input type="date" id="check-out" name="check_out" class="room-detail-checkoutinput" value="{{$end}}">
 
                 <label for=" fullname">Full Name</label>
-                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name">
+                <input type="text" id="fullname" name="guest" placeholder="Enter your full name">
 
                 <label for="email">Email</label>
                 <input type="text" id="email" name="email" placeholder="Enter your email">
 
                 <label for="phone">Phone</label>
-                <input type="text" id="phone" name="phone" placeholder="Enter your phone">
+                <input type="text" id="phone" name="phone_number" placeholder="Enter your phone">
 
                 <label for="message">Message</label>
-                <input type="text" id="message" name="message" placeholder="Any special request ?">
+                <input type="text" id="message" name="special_request" placeholder="Any special request ?">
 
+                <input type="hidden" name="room_id" value="{{$room['id']}}">
                 <input type="submit" value="Book Now" class="room__detail-form-button">
             </form>
         </div>

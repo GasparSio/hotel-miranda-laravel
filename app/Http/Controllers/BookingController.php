@@ -13,31 +13,16 @@ class BookingController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'checkin' => 'required',
-            'checkout' => 'required',
-            'fullname' => 'required',
+            'check_in' => 'required',
+            'check_out' => 'required',
+            'guest' => 'required',
             'email' => 'required|email',
-            'phone' => 'required',
-            'message' => 'required',
+            'phone_number' => 'required',
+            'special_request' => 'required',
+            'room_id' => 'required',
         ]);
 
-        $checkin = $request->input('check-in');
-        $checkout = $request->input('check-out');
-        $fullname = $request->input('fullname');
-        $email = $request->input('email');
-        $phone = $request->input('phone');
-        $message = $request->input('message');
-        $roomId = $_SESSION['roomId'];
-
-        Booking::create([
-            'guest' => $fullname,
-            'phone_number' => $phone,
-            'email' => $email,
-            'check_in' => $checkin,
-            'check_out' => $checkout,
-            'special_request' => $message,
-            'room_id' => $roomId,
-        ]);
+        Booking::create($request->all());
 
         $error = false;
         $notification = 'Your form has been sent';
@@ -64,7 +49,6 @@ class BookingController extends Controller
         $roomId = $request->input('roomId');
         $_SESSION['roomId'] = $roomId;
         $room = Room::find($roomId);
-
 
         $room = Room::process_room($room);
 
