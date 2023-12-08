@@ -12,8 +12,10 @@ Route::get('/about', function () {
 
 Route::get('/offers', [OfferController::class, 'index'])->name('offers');
 
-Route::match(['get', 'post'], '/contact', [ContactController::class, 'store']);
-
+Route::controller(ContactController::class)->group(function () {
+    Route::get('/contact', 'show')->name('contact');
+    Route::post('/contact', 'store')->name('contact');
+});
 Route::controller(RoomController::class)->group(function () {
     Route::get('/', 'index')->name('index');
     Route::get('/rooms-grid', 'rooms')->name('rooms-grid');
