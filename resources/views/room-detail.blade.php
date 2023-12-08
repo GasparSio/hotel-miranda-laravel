@@ -121,7 +121,7 @@
                 <h3>{{$relatedRoom['room_type']}}</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
                 <div class="room__detail-grid-price">
-                    <span>${{$relatedRoom['price']}}/Night</span>
+                    <span class='{{ $relatedRoom["discount"] ? "price-low-number" : "price-number-big" }}'>$ {{$relatedRoom['discountedPrice']}} /night</span>
                     <form action="../room-detail" method="GET">
                         <input type="hidden" name="roomId" value="{{$relatedRoom['id']}}">
                         <button type="submit">Booking Now</button>

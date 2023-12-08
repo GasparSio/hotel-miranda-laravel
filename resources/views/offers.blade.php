@@ -70,7 +70,6 @@
     <div class="offers__detail-line"></div>
     <div class="offers__detail-slider-container">
         <div class="offers__detail-cards-container">
-
             @foreach($rooms as $room)
             <div class="offers__detail-rooms-slider card-detail1">
                 <img src="{{$room['randomImage']}}" alt="room image" />
