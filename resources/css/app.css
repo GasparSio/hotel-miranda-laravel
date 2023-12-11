@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.icon_section-H {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 14px 24px 0px rgba(139, 139, 139, 0.2509803922);
+    color: black;
+    text-decoration: none;
+}
+
+.icon_section-H span {
+    font-weight: 600;
+    font-size: 25px;
+    font-family: "Archivo";
+}
