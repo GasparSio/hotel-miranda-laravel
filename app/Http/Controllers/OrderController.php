@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Order;
+use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
 {
@@ -11,7 +13,11 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        $id = Auth::id();
+        $orders = Order::where('user_id', $id)
+            ->get();
+
+        return view('your-orders', ['orders' => $orders]);
     }
 
     /**
@@ -27,7 +33,17 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'type' => 'required',
+            'description' => 'required',
+            'user_id' => 'required',
+            'room_id' => 'required',
+        ]);
+
+        $orders = Order::create($request->all())
+            ->get();
+
+        return view('your-orders', ['orders' => $orders]);
     }
 
     /**
