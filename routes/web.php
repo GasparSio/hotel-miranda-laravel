@@ -19,9 +19,13 @@ use App\Http\Controllers\BookingController;
 
 
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/roomservice', function () {
+    return view('roomservice');
+})->middleware(['auth', 'verified'])->name('roomservice');
+
+Route::get('/roomservice/your-orders', function () {
+    return view('your-orders');
+})->middleware(['auth', 'verified'])->name('your-orders');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
