@@ -25,7 +25,11 @@ Route::get('/roomservice', function () {
     return view('roomservice');
 })->middleware(['auth', 'verified'])->name('roomservice');
 
-Route::get('/roomservice/your-orders', [OrderController::class, 'index'])->middleware(['auth', 'verified'])->name('your-orders');
+Route::controller(OrderController::class)->group(function () {
+    Route::get('/roomservice/your-orders', 'index')->middleware(['auth', 'verified'])->name('your-orders');
+    Route::post('/roomservice/your-orders', 'store')->middleware(['auth', 'verified'])->name('your-orders');
+    Route::delete('/roomservice/your-orders', 'destroy')->middleware(['auth', 'verified'])->name('your-orders');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
