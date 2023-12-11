@@ -34,15 +34,14 @@ class OrderController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'room_id' => 'required|integer',
             'type' => 'required',
             'description' => 'required',
             'user_id' => 'required',
-            'room_id' => 'required',
         ]);
 
         $orders = Order::create($request->all())
             ->get();
-
         return view('your-orders', ['orders' => $orders]);
     }
 
@@ -73,8 +72,10 @@ class OrderController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Request $request)
     {
-        //
+        $id = $request->input('order_id');
+        Order::destroy($id);
+        return redirect('/roomservice/your-orders');
     }
 }
