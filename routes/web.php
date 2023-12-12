@@ -21,9 +21,7 @@ use App\Http\Controllers\OrderController;
 
 
 
-Route::get('/roomservice', function () {
-    return view('roomservice');
-})->middleware(['auth', 'verified'])->name('roomservice');
+Route::get('/roomservice', [OrderController::class, 'show'])->middleware(['auth', 'verified'])->name('roomservice');
 
 Route::controller(OrderController::class)->group(function () {
     Route::get('/roomservice/your-orders', 'index')->middleware(['auth', 'verified'])->name('your-orders');
