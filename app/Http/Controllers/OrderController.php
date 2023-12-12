@@ -66,7 +66,16 @@ class OrderController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'room_id' => 'required|integer',
+            'type' => 'required',
+            'description' => 'required',
+            'user_id' => 'required',
+        ]);
+
+        $orders = Order::create($request->all())
+            ->get();
+        return view('your-orders', ['orders' => $orders]);
     }
 
     /**
