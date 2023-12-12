@@ -29,6 +29,7 @@ Route::controller(OrderController::class)->group(function () {
     Route::get('/roomservice/your-orders', 'index')->middleware(['auth', 'verified'])->name('your-orders');
     Route::post('/roomservice/your-orders', 'store')->middleware(['auth', 'verified'])->name('your-orders');
     Route::delete('/roomservice/your-orders', 'destroy')->middleware(['auth', 'verified'])->name('your-orders');
+    Route::put('/roomservice/your-orders', 'update')->middleware(['auth', 'verified'])->name('your-orders');
 });
 
 Route::middleware('auth')->group(function () {

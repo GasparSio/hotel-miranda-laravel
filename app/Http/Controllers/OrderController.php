@@ -64,18 +64,15 @@ class OrderController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request)
     {
-        $request->validate([
-            'room_id' => 'required|integer',
-            'type' => 'required',
-            'description' => 'required',
-            'user_id' => 'required',
-        ]);
+        $id = $request->input('order_id');
+        $order = Order::find($id);
 
-        $orders = Order::create($request->all())
-            ->get();
-        return view('your-orders', ['orders' => $orders]);
+        $order->update($request->all());
+        // $order = Order::all();
+
+        return redirect('/roomservice/your-orders');
     }
 
     /**
