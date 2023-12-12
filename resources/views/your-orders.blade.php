@@ -43,7 +43,7 @@
                             <span class="room-number">{{ $order['created_at'] }}</span>
                         </td>
                         <td class="px-6 py-4">
-                            <select id="{{$order->id}}-type" name="type" class="m-auto w-100 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 disabled:border-transparent disabled:bg-transparent disabled:text-black disabled:appearance-none" disabled>
+                            <select id="{{$order->id}}-type" name="type" class="m-auto w-100 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 disabled:border-transparent disabled:bg-transparent disabled:text-black" disabled>
                                 <option value="" selected disabled>{{ $order['type'] }}</option>
                                 <option value="Food">Food</option>
                                 <option value="Other">Other</option>
