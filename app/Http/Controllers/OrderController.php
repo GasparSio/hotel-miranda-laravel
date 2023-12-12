@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Order;
+use App\Models\Room;
 use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
@@ -15,8 +16,9 @@ class OrderController extends Controller
     {
         $id = Auth::id();
         $orders = Order::where('user_id', $id)
+            ->join('room', 'orders.room_id', '=', 'room.id')
+            ->select('room.room_number', 'orders.*')
             ->get();
-
         return view('your-orders', ['orders' => $orders]);
     }
 
@@ -48,9 +50,10 @@ class OrderController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show()
     {
-        //
+        $allrooms = Room::all();
+        return view('roomservice', ['allrooms' => $allrooms]);
     }
 
     /**
