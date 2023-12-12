@@ -39,7 +39,7 @@
             <a href="./contact" class="section-contact" id="contactLink">Contact</a>
         </div>
         <div class="header__section-search-account">
-            <a href="../contact"><img src="/img/home/img-account.png" alt="Account icon"></a>
+            <a href="../login"><img src="/img/home/img-account.png" alt="Account icon"></a>
             <a href="../rooms-grid"><img src="/img/home/img-search.png" alt="Search icon"></a>
         </div>
         <div class="header__mob-menu inactive">
