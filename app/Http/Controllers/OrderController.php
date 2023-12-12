@@ -42,9 +42,10 @@ class OrderController extends Controller
             'user_id' => 'required',
         ]);
 
-        $orders = Order::create($request->all())
-            ->get();
-        return view('your-orders', ['orders' => $orders]);
+        Order::create($request->all());
+        //     ->get();
+        // return view('your-orders', ['orders' => $orders]);
+        return redirect('/roomservice/your-orders');
     }
 
     /**
