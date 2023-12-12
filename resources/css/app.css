@@ -40,9 +40,7 @@
     min-width: 300px;
     border-radius: 4px;
 }
-/* .status:disabled{
-    background-color: transparent;
+.table-row:hover{
+    transform: scale(1.01);
+    box-shadow: 0px 14px 24px 0px rgba(215, 191, 143, 0.43);
 }
-.status:not(disabled){
-    background-color: rgb(188, 32, 32);
-} */

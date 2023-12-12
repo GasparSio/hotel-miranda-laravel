@@ -32,7 +32,7 @@
             </thead>
             <tbody>
                 @foreach($orders as $order)
-                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 table-row">
                     <form method="POST" action="/roomservice/your-orders" id="form-orders">
                         @csrf
                         @method('PUT')
