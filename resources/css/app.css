@@ -19,3 +19,21 @@
     font-size: 25px;
     font-family: "Archivo";
 }
+.service-label{
+    width: 95%;
+    margin: auto;
+    padding-bottom: 10px;
+}
+.input-service{
+    width: 95%;
+    margin: auto;
+}
+.room-number{
+    width: 85px;
+}
+.order-type{
+    width: 100px;
+}
+.order-description{
+    min-width: 300px;
+}
