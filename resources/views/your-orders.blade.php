@@ -37,7 +37,7 @@
                         @csrf
                         @method('PUT')
                         <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            <span class="room-number">{{ $order['room_id'] }}</span>
+                            <span class="room-number">{{ $order['room_number'] }}</span>
                         </td>
                         <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                             <span class="room-number">{{ $order['created_at'] }}</span>
