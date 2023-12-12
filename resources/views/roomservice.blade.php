@@ -42,4 +42,9 @@
             </div>
         </div>
     </div>
+    <a href="../">
+        <x-primary-button style="position: absolute; bottom: 3%; right: 3%;" class="ms-3">
+            {{ __('Go back') }}
+        </x-primary-button>
+    </a>
 </x-app-layout>
