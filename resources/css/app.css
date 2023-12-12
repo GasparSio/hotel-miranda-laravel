@@ -30,10 +30,19 @@
 }
 .room-number{
     width: 85px;
+    border-radius: 4px;
 }
 .order-type{
     width: 100px;
+    border-radius: 4px;
 }
 .order-description{
     min-width: 300px;
+    border-radius: 4px;
 }
+/* .status:disabled{
+    background-color: transparent;
+}
+.status:not(disabled){
+    background-color: rgb(188, 32, 32);
+} */
