@@ -22,7 +22,6 @@
                         Update
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Delete
                     </th>
                 </tr>
             </thead>
@@ -32,13 +31,13 @@
                     <form method="POST" action="/roomservice/your-orders/{{$order['id']}}">
                         @csrf
                         <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            <input type="number" name="room_id" value="{{ $order['room_id'] }}" class="form-input">
+                            <input type="number" name="room_id" value="{{ $order['room_id'] }}" class="form-input room-number">
                         </td>
                         <td class="px-6 py-4">
-                            <input type="text" name="type" value="{{ $order['type'] }}" class="form-input">
+                            <input type="text" name="type" value="{{ $order['type'] }}" class="form-input order-type">
                         </td>
                         <td class="px-6 py-4">
-                            <input type="text" name="description" value="{{ $order['description'] }}" class="form-input">
+                            <input type="text" name="description" value="{{ $order['description'] }}" class="form-input order-description">
                         </td>
                         <td class="px-6 py-4">
                             <input type="hidden" name="user_id" value="{{ Auth::id() }}">
