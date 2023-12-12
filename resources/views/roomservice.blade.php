@@ -14,7 +14,15 @@
                     <!-- Email Address -->
                     <div style="width: 95%; margin: auto; margin-top: 10px;" class="mt-4 flex flex-col">
                         <x-input-label for="room" :value="__('Room Number')" class="m-auto w-11/12" />
-                        <x-text-input placeholder="Write your room number" id="room" class="block mt-1 m-auto w-11/12" type="number" name="room_id" :value="old('room')" max="300" required autofocus />
+                        <!-- <x-text-input placeholder="Write your room number" id="room" class="block mt-1 m-auto w-11/12" type="number" name="room_id" :value="old('room')" max="300" required autofocus /> -->
+                        <select id="type-order" name="room_id" class="m-auto w-11/12 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500" required>
+                            <option value="" selected disabled>Select your room number</option>
+                            @if(isset($allrooms))
+                            @foreach($allrooms as $room)
+                            <option value="{{$room->id}}">{{$room['room_number']}}</option>
+                            @endforeach
+                            @endif
+                        </select>
                         <x-input-error :messages="$errors->get('room')" class="mt-2" />
                     </div>
 
