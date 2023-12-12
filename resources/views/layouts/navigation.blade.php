@@ -5,9 +5,9 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="../" class="icon_section-H">
+                    <a href="../" class="icon_section-H" style="width: 40px; height: 40px; display: flex; justify-content: center; align-items: center; box-shadow: 0px 14px 24px 0px rgb(153 129 80 / 43%);">
                         <div>
-                            <span>H</span>
+                            <span style="font-size: 20px; font-weight:600;">H</span>
                         </div>
                     </a>
                 </div>
