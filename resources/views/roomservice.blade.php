@@ -11,22 +11,15 @@
                 <form method="POST" action="roomservice/your-orders">
                     @csrf
 
-                    <!-- Email Address -->
+                    <!-- Room Number -->
                     <div style="width: 95%; margin: auto; margin-top: 10px;" class="mt-4 flex flex-col">
                         <x-input-label for="room" :value="__('Room Number')" class="m-auto w-11/12" />
-                        <!-- <x-text-input placeholder="Write your room number" id="room" class="block mt-1 m-auto w-11/12" type="number" name="room_id" :value="old('room')" max="300" required autofocus /> -->
-                        <select id="type-order" name="room_id" class="m-auto w-11/12 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500" required>
-                            <option value="" selected disabled>Select your room number</option>
-                            @if(isset($allrooms))
-                            @foreach($allrooms as $room)
-                            <option value="{{$room->id}}">{{$room['room_number']}}</option>
-                            @endforeach
-                            @endif
-                        </select>
+                        <input type="hidden" name="room_id" value="{{ $room['id'] }}">
+                        <span class="m-auto w-11/12 pt-1">{{ $user['room_number'] }}</span>
                         <x-input-error :messages="$errors->get('room')" class="mt-2" />
                     </div>
 
-                    <!-- Password -->
+                    <!-- Select Type or order -->
                     <div style="width: 95%; margin: auto; margin-top: 10px;" class="flex flex-col">
                         <label for="type-order" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white m-auto w-11/12">Select an option</label>
                         <select id="type-order" name="type" class="m-auto w-11/12 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500" required>
