@@ -16,7 +16,6 @@ return new class extends Migration
             $table->enum('type', ['Food', 'Other']);
             $table->string('description');
             $table->timestamps();
-
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('guest')->onUpdate('cascade')->onDelete('cascade');
             $table->integer('room_id');
