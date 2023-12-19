@@ -6,8 +6,8 @@
 <section class="taketour_section">
     <div class="taketour_section-header-rect"></div>
     <div class="taketour_section-content">
-        <p>THE ULTIMATE LUXURY EXPERIENCE</p>
-        <h1>The Perfect Base For You</h1>
+        <p>THE ULTIMATE LUXURY EXPERIENCE111</p>
+        <h1>The Perfect Base For You111</h1>
         <div class="taketour_section-button-content">
             <a href="rooms-grid" class="button-taketour">TAKE A TOUR</a>
             <a href="about" class="button-learnmore">LEARN MORE</a>
