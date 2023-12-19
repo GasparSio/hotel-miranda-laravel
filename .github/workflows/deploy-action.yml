@@ -14,12 +14,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Debug Secrets
-        run: |
-          echo "Host: ${{ secrets.HOST }}"
-          echo "Username: ${{ secrets.USERNAME }}"
-          echo "SSH Private Key: ${{ secrets.SSH_PRIVATE_KEY }}"
-
       - name: Deploy to EC2
         uses: appleboy/ssh-action@v1.0.0
         with:
@@ -27,6 +21,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           host: ${{ secrets.HOST }}
           script: |
+            whoami
             cd /var/www/hotel-miranda-laravel
             git push origin main
 
