@@ -35,7 +35,7 @@
             </div>
         </div>
         <div class="room__detail-image">
-            <img src="/img/rooms-grid/room-1.avif" alt="room 1">
+            <img src="/public/img/rooms-grid/room-1.avif" alt="room 1">
         </div>
         <div class="room__detail-form-container">
             <h1>Check Availability</h1>
