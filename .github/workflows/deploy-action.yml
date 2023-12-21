@@ -11,6 +11,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Install Composer
+        run: |
+          sudo apt-get update
+          sudo apt-get install composer
+
       - name: Deploy to EC2
         uses: appleboy/ssh-action@v1.0.0
         with:
@@ -23,7 +28,7 @@ jobs:
               git config --global user.email "sio.gaspar@gmail.com"
               git config --global user.name "GasparSio"
               sudo chown -R ubuntu:ubuntu /var/www/hotel-miranda-laravel
-              sudo git pull
+              git pull
               composer install
               php artisan migrate:refresh
               sudo chown -R www-data:www-data /var/www/hotel-miranda-laravel
