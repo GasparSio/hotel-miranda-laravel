@@ -35,9 +35,7 @@
             </div>
         </div>
         <div class="room__detail-image">
-            @foreach ($room['randomImage'] as $randomImage)
             <img src="/img/home/pic-slider1.jpg" alt="room image">
-            @endforeach
         </div>
         <div class="room__detail-form-container">
             <h1>Check Availability</h1>
