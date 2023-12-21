@@ -35,7 +35,10 @@
             </div>
         </div>
         <div class="room__detail-image">
-            <img src="/img/home/pic-slider1.jpg" alt="room image">
+            @foreach ($room['randomImage'] as $randomImage)
+            <img src="{{ asset($room['randomImage']) }}" alt="room image">
+            <!-- <img src="/img/home/pic-slider1.jpg" alt="room image"> -->
+            @endforeach
         </div>
         <div class="room__detail-form-container">
             <h1>Check Availability</h1>
