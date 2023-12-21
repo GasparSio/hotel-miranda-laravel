@@ -20,8 +20,8 @@ jobs:
             port: ${{ secrets.PORT }}
             script: |
               cd /var/www/hotel-miranda-laravel
+              sudo git pull
               sudo chown -R ubuntu:ubuntu /var/www/hotel-miranda-laravel
-              git pull origin main
               composer install
               php artisan migrate:refresh
               sudo chown -R www-data:www-data /var/www/hotel-miranda-laravel
