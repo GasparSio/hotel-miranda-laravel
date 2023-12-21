@@ -20,7 +20,8 @@ jobs:
             port: ${{ secrets.PORT }}
             script: |
               cd /var/www/hotel-miranda-laravel
-              sudo chown -R ubuntu:ubuntu /var/www/hotel-miranda-laravel
+              git config --global user.email "sio.gaspar@gmail.com"
+              git config --global user.name "GasparSio"
               git pull
               composer install
               php artisan migrate:refresh
