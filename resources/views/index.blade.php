@@ -7,7 +7,7 @@
     <div class="taketour_section-header-rect"></div>
     <div class="taketour_section-content">
         <p>THE ULTIMATE LUXURY EXPERIENCE999111</p>
-        <h1>The Perfect Base For You</h1>
+        <h1>The Perfect Base For You me cago en la concha de tu re putisima madre</h1>
         <div class="taketour_section-button-content">
             <a href="rooms-grid" class="button-taketour">TAKE A TOUR</a>
             <a href="about" class="button-learnmore">LEARN MORE</a>
